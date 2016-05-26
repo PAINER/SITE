@@ -1,0 +1,33 @@
+
+<html>
+<head>
+	<title>Блог</title>
+
+	<style>
+
+body { background: url(http://wallpaper.zone/img/355655.jpg); }
+
+	</style>
+
+
+</head>
+<body>
+<table align="center" height="140" width="515" background="http://static.wixstatic.com/media/0a18ea_62af71af449343689e18bb1e2a52d9db.jpg/v1/fill/w_518,h_146,al_c,lg_1,q_80/0a18ea_62af71af449343689e18bb1e2a52d9db.jpg"><tr><td>
+	
+<h1 align="center"><font face="Arial">Практика</font></h1>
+</td>
+</tr>	
+</table>
+<table frame="void" cellpadding="50" width="850" height="100%" background="http://www.pcc1981.de/index_htm_files/635.png" align="center"><tr><td>
+{% for article in articles %}
+<h4 align="right"> Дата публикации: {{ article.article_date }}</h6> 
+<h2 align="center"> <a href="/articles/get/{{ article.id }}"> {{ article.article_title }} </a></h4>
+<h4> {{ article.article_text }} </h4>
+<p> <a href="/articles/addlike/{{ article.id }}/"></a> {{ article.article_likes }} </p>
+     <hr>
+{% endfor %}
+</td>
+</tr>
+</table>
+</body>
+</html>

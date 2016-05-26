@@ -1,0 +1,7 @@
+{% for article in articles %}
+<h4 align="right"> Дата публикации: {{ article.article_date }}</h6> 
+<h2 align="center"> <a href="/articles/get/{{ article.id }}"> {{ article.article_title }} </a></h4>
+<h4> {{ article.article_text }} </h4>
+<p> <a href="/articles/addlike/{{ article.id }}/"></a> {{ article.article_likes }} </p>
+     <hr>
+{% endfor %}
